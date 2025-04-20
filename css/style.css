@@ -1,0 +1,331 @@
+* {
+    color: #25282e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Impede scroll horizontal */
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box; /* Garante que padding e border não extrapolem o tamanho */
+  }
+  
+a, i {
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.secondary-color {
+    color: #555;
+}
+
+.center-image {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Botão personalizado */
+.btn {
+    text-decoration: none;
+    background-color: #25282e;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Header */
+#header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.blog-hero {
+    height: 300px;
+    background-image: url('../img/5.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+  article h2 {
+    margin-top: 30px;
+  }
+  article p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+  }
+#header p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+#logo {
+    width: 45px;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: center; /* Centraliza os itens */
+  align-items: center;     /* Alinha verticalmente */
+  gap: 30px;               /* Espaçamento entre os itens */
+  padding: 10px 20px;
+  flex-wrap: wrap;         /* Permite quebra em telas menores */
+  width: 100%;             /* Ocupa toda a largura */
+  max-width: 1200px;       /* Limita um pouco em telas grandes */
+  margin: 10px auto;
+  flex-direction: row;     /* Garante que fiquem lado a lado */
+}
+
+#navbar a {
+  padding: 10px 20px;
+  color: #444;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  white-space: nowrap;  /* Impede quebra de linha */
+}
+
+#navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #c1b696;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s;
+}
+
+#navbar a:hover {
+  color: #c1b696;
+}
+
+#navbar a:hover::after {
+  width: 100%;
+}
+
+#navbar .btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.2;
+  display: inline-block;
+  min-width: 200px;
+}
+
+#navbar .btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* === CONTEÚDO PRINCIPAL (MAIN E ARTICLE) === */
+main {
+    padding: 2rem;
+  }
+  /* === CONTEÚDO DO ARTIGO CENTRALIZADO === */
+article {
+    max-width: 700px; /* largura visível mais estreita */
+    margin: 0 auto; /* centraliza horizontalmente */
+    text-align: left; /* mantém os textos alinhados à esquerda */
+    font-family: 'Roboto', sans-serif;
+  }
+  /* === CONCLUSÃO === */
+article section:last-of-type {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 2rem;
+    margin-top: 3rem;
+  }
+  
+  /* === TÍTULO PRINCIPAL === */
+  article h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* === TEXTO INTRODUTÓRIO === */
+  article .lead {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: #444;
+  }
+  
+  /* === IMAGEM DAS DICAS === */
+  article img {
+    display: block;
+    margin: 0 auto 2rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* === SEÇÕES COM DICAS === */
+  article section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  /* === TÍTULOS DAS DICAS === */
+  article section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem !important;
+  }
+  article section h3,h4,h5,h6{
+    margin-bottom: 1rem;
+  } 
+  /* === PARÁGRAFOS DAS DICAS === */
+  article section p {
+    font-size: 1.13rem;
+    margin-bottom: 2.5rem;
+    color: #333;
+  }
+  .card-img-top {
+    height: 333px; /* ou 160px, se quiser menor ainda */
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .card a:hover .card-title {
+    color: #007bff; /* azul Bootstrap ou escolha sua cor */
+    text-decoration: underline; /* adiciona sublinhado ao passar o mouse */
+  }
+  
+  
+  /* === RESPONSIVO === */
+  @media (max-width: 768px) {
+    main {
+      padding: 1rem;
+    }
+  
+    article h1 {
+      font-size: 1.5rem;
+    }
+  
+    article section h2 {
+      font-size: 1.25rem;
+    }
+  }
+  
+/* Main image */
+.main-image {
+    height: 450px;
+    background-image: url('../img/guia_rapido.png');
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.main-image-info {
+    background-color: #fff;
+    padding: 25px;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-image-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Galeria */
+#img-2 {
+    background-image: url('../img/5.png');
+}
+
+#img-3 {
+    background-image: url('../img/ChatGPT Image 18_04_2025, 18_23_08.png');
+}
+
+#img-4 {
+    background-image: url('../img/Cartao.png');
+}
+
+#img-5 {
+    background-image: url('../img/educa.png');
+}
+
+#img-6 {
+    background-image: url('../img/habito.png');
+}
+
+#gallery-container h1 {
+    text-align: center;
+}
+
+#gallery-container h1,
+#gallry-container .col-md-6,
+#gallery-container .col-12 {
+    margin-bottom: 50px;
+}
+
+.small-image-container {
+    height: 300px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.small-image-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #ccc;
+    height: 250px;
+    padding: 30px;
+}
+
+footer i {
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a:hover i {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+#social-icons-container {
+    padding: 25px;
+}
+
+#social-icons-container div {
+    text-align: center;
+}
+
+footer p {
+    text-align: center;
+    margin: 20px;
+}
